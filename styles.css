@@ -1,0 +1,209 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('Gifvsimg/anh-gif.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.page {
+    display: none;
+    text-align: center;
+    color: #ff4081;
+    position: relative;
+    z-index: 10;
+    padding: 10px;
+}
+
+.page.active {
+    display: block;
+}
+
+#kitty {
+    width: 250px;
+    margin-bottom: 20px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+#message,
+h1,
+h3 {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #ff80ab;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s, font-size 0.3s;
+    min-width: 100px;
+}
+
+button:hover {
+    background-color: #f06292;
+}
+
+#next-btn {
+    margin-top: 20px;
+}
+
+/* Tấm thiệp ở Page 1 */
+.card {
+    background-color: #fff;
+    border: 2px solid #ff80ab;
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 300px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 15;
+}
+
+.card h3 {
+    font-size: 20px;
+    color: #ff4081;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Bông hoa lớn ở Page 2 */
+.large-flower {
+    width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+    animation: grow 3s infinite;
+}
+
+@keyframes grow {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+#music-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px 15px;
+    background-color: #ff80ab;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    z-index: 20;
+    font-size: 16px;
+}
+
+#music-toggle:hover {
+    background-color: #f06292;
+}
+
+.side-gif {
+    position: fixed;
+    width: 150px;
+    animation: bounce 2s infinite;
+}
+
+#left-gif {
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+}
+
+#right-gif {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+/* Media Query cho điện thoại (dưới 768px) */
+@media only screen and (max-width: 768px) {
+    #kitty {
+        width: 150px;
+    }
+
+    #message,
+    h1,
+    h3 {
+        font-size: 18px;
+    }
+
+    .card {
+        max-width: 250px;
+        padding: 15px;
+    }
+
+    .card h3 {
+        font-size: 16px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+
+    .large-flower {
+        width: 200px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 8px 15px;
+        min-width: 80px;
+    }
+
+    .side-gif {
+        width: 100px;
+        top: 60%;
+    }
+
+    #left-gif {
+        left: 5px;
+    }
+
+    #right-gif {
+        right: 5px;
+    }
+
+    #music-toggle {
+        top: 5px;
+        right: 5px;
+        padding: 8px 12px;
+        font-size: 14px;
+        z-index: 30;
+    }
+}
