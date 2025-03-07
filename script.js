@@ -17,19 +17,19 @@ function playMusic() {
     music.play().catch(() => {
         musicToggle.style.display = 'block';
         musicToggle.textContent = 'Bật nhạc';
-        musicToggle.onclick = () => {
-            music.play();
-            musicToggle.textContent = 'Tắt nhạc';
-        };
     });
 }
 
 playMusic();
 
+// Sự kiện chuyển đổi bật/tắt nhạc
 musicToggle.addEventListener('click', () => {
     if (music.paused) {
-        music.play();
-        musicToggle.textContent = 'Tắt nhạc';
+        music.play().then(() => {
+            musicToggle.textContent = 'Tắt nhạc';
+        }).catch(() => {
+            alert('Không thể phát nhạc. Vui lòng kiểm tra file âm thanh!');
+        });
     } else {
         music.pause();
         musicToggle.textContent = 'Bật nhạc';
