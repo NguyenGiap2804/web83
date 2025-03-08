@@ -47,10 +47,13 @@ passwordInput.addEventListener('keypress', (e) => {
 
 // Kiểm tra và xử lý tự động phát nhạc trên điện thoại
 function playMusic() {
-    music.play().catch(() => {
-        musicToggle.style.display = 'block';
-        musicToggle.textContent = 'Bật nhạc';
-    });
+    if (music.paused) {
+        music.play().then(() => {
+            musicToggle.textContent = 'Tắt nhạc';
+        }).catch(() => {
+            alert('Không thể phát nhạc. Vui lòng kiểm tra file âm thanh!');
+        });
+    }
 }
 
 playMusic();
