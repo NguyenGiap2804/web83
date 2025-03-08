@@ -13,6 +13,69 @@ body {
     position: relative;
 }
 
+/* Bảng nhập mật khẩu */
+.password-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Nền mờ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+}
+
+.password-box {
+    background: #ff3333;
+    /* Màu đỏ */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.password-box h3 {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.password-box input {
+    padding: 10px;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.password-box button {
+    padding: 10px 20px;
+    background-color: #ff80ab;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.password-box button:hover {
+    background-color: #f06292;
+}
+
+.error-message {
+    color: white;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
 .page {
     display: none;
     text-align: center;
@@ -64,7 +127,7 @@ button {
 }
 
 button:hover {
-    background-color: #f06292;
+    background-color: #ee96b3;
 }
 
 #next-btn {
@@ -74,7 +137,7 @@ button:hover {
 /* Tấm thiệp ở Page 1 */
 .card {
     background-color: #fff;
-    border: 2px solid #ff80ab;
+    border: 2px solid #f03a76;
     border-radius: 15px;
     padding: 20px;
     max-width: 300px;
@@ -85,7 +148,7 @@ button:hover {
 
 .card h3 {
     font-size: 20px;
-    color: #ff4081;
+    color: #e9175d;
     margin-bottom: 10px;
 }
 
@@ -205,5 +268,28 @@ button:hover {
         padding: 8px 12px;
         font-size: 14px;
         z-index: 30;
+    }
+
+    .password-box {
+        padding: 15px;
+    }
+
+    .password-box h3 {
+        font-size: 16px;
+    }
+
+    .password-box input {
+        width: 150px;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .password-box button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .error-message {
+        font-size: 12px;
     }
 }

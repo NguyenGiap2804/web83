@@ -1,35 +1,35 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="vi">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>8/3 - Lời Chúc Dành Cho Mẹ</title>
+    <title>8/3 - Lời Chúc Muộn Màng</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
 
-    <!-- Page 1: Tấm thiệp và Hello Kitty -->
+    Page 1: Tấm thiệp và Hello Kitty
     <div id="page1" class="page active">
         <img src="Gifvsimg/c92b9543e8a8d75b28cde087c887cbef.gif" alt="Hello Kitty" id="kitty">
-        <p id="message">Chúc mẹ 8/3 thật vui vẻ nha!</p>
+        <p id="message">Chúc các bạn nữ 8/3 thật vui vẻ nha!</p>
         <div class="card">
             <h3>Thiệp chúc mừng 8/3</h3>
             <p>
-                Mẹ yêu ơi, nhân ngày 8/3, con muốn gửi tới mẹ những lời chúc tốt đẹp nhất! Cảm ơn mẹ vì đã luôn yêu
-                thương và chăm sóc con. Mẹ là người phụ nữ tuyệt vời nhất trong lòng con. Con chúc mẹ luôn khỏe mạnh,
-                hạnh phúc và mãi rạng rỡ như những bông hoa tươi thắm nhất. Yêu mẹ nhiều lắm! ❤️
+                Nhân ngày 8/3, xin gửi đến tất cả các bạn nữ những lời chúc tốt đẹp nhất! Chúc các bạn luôn xinh đẹp, rạng rỡ và tràn
+                đầy hạnh phúc. Cảm ơn vì sự mạnh mẽ, dịu dàng và những điều tuyệt vời mà các bạn mang đến cho cuộc sống này. Chúc các
+                bạn luôn tự tin, thành công và tận hưởng những niềm vui ngọt ngào nhất. Happy Women's Day! ❤️
             </p>
         </div>
         <button id="next-btn">Next Message</button>
     </div>
 
     <!-- Page 2: Bông hoa lớn và thông điệp -->
-    <div id="page2" class="page">
+    <!-- <div id="page2" class="page">
         <img src="Gifvsimg/tang-hoa-meme-16.webp" alt="Large Flower" id="large-flower" class="large-flower">
-        <h1>Chúc mẹ ngày 8/3 thật hạnh phúc!</h1>
+        <h1>Chúc các bạn nữ ngày 8/3 thật hạnh phúc!</h1>
     </div>
 
     <audio id="background-music" loop>
@@ -37,6 +37,65 @@
         Trình duyệt của bạn không hỗ trợ âm thanh.
     </audio>
     <button id="music-toggle">Tắt nhạc</button>
+
+    <script src="script.js"></script>
+</body>
+
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8/3 - Lời Chúc Muộn Màng</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Bảng nhập mật khẩu -->
+    <div id="password-modal" class="password-modal">
+        <div class="password-box">
+            <h3>Nhập mật khẩu để xem lời chúc</h3>
+            <input type="password" id="password-input" placeholder="Nhập mật khẩu...">
+            <button id="submit-password">Xác nhận</button>
+            <p id="error-message" class="error-message hidden">Bạn biết password chính là sự tuyệt vời của bạn mà!</p>
+        </div>
+    </div>
+
+    <!-- Nội dung chính (ẩn ban đầu) -->
+    <div id="main-content" class="hidden">
+        
+        <!-- Page 1: Tấm thiệp và Hello Kitty -->
+        <div id="page1" class="page active">
+            <img src="Gifvsimg/c92b9543e8a8d75b28cde087c887cbef.gif" alt="Hello Kitty" id="kitty">
+            <p id="message">Chúc các bạn nữ 8/3 thật vui vẻ nha!</p>
+            <div class="card">
+                <h3>Gửi gắm những lời đáng iêu ❤️ </h3>
+                <p>
+                    Nhân ngày 8/3, xin gửi đến tất cả các bạn nữ những lời chúc tốt đẹp nhất! Chúc các bạn luôn xinh đẹp, rạng rỡ và tràn
+                    đầy hạnh phúc. Cảm ơn vì sự mạnh mẽ, dịu dàng và những điều tuyệt vời mà các bạn mang đến cho cuộc sống này. Chúc các
+                    bạn luôn tự tin, thành công và tận hưởng những niềm vui ngọt ngào nhất. Happy Women's Day! ❤️
+                </p>
+            </div>
+            <button id="next-btn">Next Message</button>
+        </div>
+
+        <!-- Page 2: Bông hoa lớn và thông điệp -->
+        <div id="page2" class="page">
+            <img src="Gifvsimg/tang-hoa-meme-16.webp" alt="Large Flower" id="large-flower" class="large-flower">
+            <h1>Chúc các bạn nữ ngày 8/3 thật hạnh phúc!</h1>
+        </div>
+
+        <audio id="background-music" loop>
+            <source src="adudiovsVideo/videoplayback.weba" type="audio/mpeg">
+            Trình duyệt của bạn không hỗ trợ âm thanh.
+        </audio>
+        <button id="music-toggle">Tắt nhạc</button>
+    </div>
 
     <script src="script.js"></script>
 </body>
